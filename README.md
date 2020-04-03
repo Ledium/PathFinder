@@ -2,7 +2,7 @@
 An App To Find Most Efficient Path from start of an integer array to it`s end
 
 
-#Tech Stack:
+# Tech Stack:
 
 --> .NET Core 3.1 <br/>
 --> Web API <br/>
