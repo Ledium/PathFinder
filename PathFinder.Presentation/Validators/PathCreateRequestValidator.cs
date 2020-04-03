@@ -7,10 +7,10 @@ namespace PathFinder.Presentation.Validators
     {
         public PathCreateRequestValidator()
         {
-            RuleFor(pcr => pcr.Input)
+            RuleFor(pcr => pcr.Inputs)
                 .NotNull();
 
-            RuleFor(pcr => pcr.Input
+            RuleFor(pcr => pcr.Inputs
                 .ToString())
                 .MinimumLength(1);
         }

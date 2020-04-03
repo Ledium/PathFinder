@@ -4,6 +4,6 @@ namespace PathFinder.Presentation.Requests
 {
     public class PathCreateRequest
     {
-        public IEnumerable<int[]> Input { get; set; }
+        public IEnumerable<int[]> Inputs { get; set; }
     }
 }

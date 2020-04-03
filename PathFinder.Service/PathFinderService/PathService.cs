@@ -1,19 +1,16 @@
 ﻿using PathFinder.DataAccess;
 using PathFinder.DataAccess.Entities;
-using System;
-using PathFinder.Service.Models;
 using PathFinder.Service.Utilities;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace PathFinder.Service.PathFinderService
 {
-    public class PathFinderService : IPathFinderService
+    public class PathService : IPathService
     {
 
         private readonly IPathRepository _pathRepository;
 
-        public PathFinderService(IPathRepository pathRepository)
+        public PathService(IPathRepository pathRepository)
         {
             _pathRepository = pathRepository;
         }

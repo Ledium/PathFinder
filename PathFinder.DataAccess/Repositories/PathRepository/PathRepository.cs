@@ -1,7 +1,6 @@
 ﻿using PathFinder.DataAccess.Entities;
 using PathFinder.DataAccess.Utilities;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace PathFinder.DataAccess
 {

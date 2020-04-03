@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using PathFinder.DataAccess.Entities;
 using PathFinder.Presentation.Requests;
 using PathFinder.Service.PathFinderService;
@@ -16,10 +11,10 @@ namespace PathFinder.Presentation.Controllers
     public class PathController : ControllerBase
     {
 
-        private readonly IPathFinderService _pathService;
+        private readonly IPathService _pathService;
 
 
-        public PathController(IPathFinderService pathService)
+        public PathController(IPathService pathService)
         {
             _pathService = pathService;
         }
@@ -41,12 +36,12 @@ namespace PathFinder.Presentation.Controllers
         }
 
         [HttpPost]
-        public ActionResult Post(IEnumerable<int[]> arrays)
+        public ActionResult Post(PathCreateRequest request)
         {
 
             var result = new List<PathEntity>();
 
-            foreach(var item in arrays)
+            foreach(var item in request.Inputs)
             {
                result.Add(_pathService.Create(item));
             }

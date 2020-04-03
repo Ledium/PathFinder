@@ -25,7 +25,7 @@ namespace PathFinder.Presentation
         {
             services.AddControllers();
           
-            services.AddScoped<IPathFinderService, PathFinderService>();
+            services.AddScoped<IPathService, PathService>();
 
             services.AddScoped<IPathRepository, PathRepository>();
 
