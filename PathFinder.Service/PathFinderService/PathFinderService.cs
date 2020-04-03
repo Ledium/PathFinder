@@ -32,8 +32,10 @@ namespace PathFinder.Service.PathFinderService
         {
 
            var entry = PathUtilities.FindPath(array);
+           var entity = new PathEntity();
 
-          var entity = _pathRepository.Create(entry.ToEntity(array));
+           if(entry != null)
+              entity = _pathRepository.Create(entry.ToEntity(array));
 
             return entity;
         }      
